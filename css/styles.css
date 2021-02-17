@@ -35,63 +35,95 @@ The designs were created to the following widths:
 - Family: [Poppins](https://fonts.google.com/specimen/Poppins)
 - Weights: 200, 400, 600
 */
-html{
-    background-color: hsl(0, 0%, 98%);
-    
-}
+
 body{
+    background-color: hsl(0, 0%, 98%);
     font-family: 'Poppins', sans-serif;
     color:hsl(234, 12%, 34%);
-    width: 1440px;
-    height: 922px;
+    max-width: 768px;
+    margin:auto;
 }
 @media screen and (min-width: 768px){
-   
-    
+  body{
+    max-width: 1200px;  
+    height: 922px;
+  }
 }
+
+/* HEADER */
+
+
 .header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 250px;
-    width: 500px;
     text-align: center;
     margin: auto;
 }
-h1{
-    font-size: 36px;
+@media screen and (min-width: 768px){
+    .header{
+        height: 235px;
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+h1{ 
+    font-size: 1.4rem;
     font-weight: 200;
     margin-bottom: 0;
-    margin-top: 68px;
-   
+    margin-top: 85px; 
+}
+@media screen and (min-width: 768px){
+    h1{
+        font-size: 2.3rem;
+        margin-top: 76px; 
+     }
 }
 h2{
-    font-size: 36px;
+    font-size: 1.4rem;
     font-weight: 600;
-    margin: -4px; 
+    margin: 2px;
     color:hsl(234, 12%, 34%);
+}
+@media screen and (min-width: 768px){
+    h2{
+        font-size: 2.3rem;
+        margin: -4px; 
+     }
 }
  header p{
     font-size: 15px;
     color: hsl(229, 6%, 66%);
     margin-top: 20px; 
+    padding-left: 30px;
+    padding-right: 30px;
 }
+@media screen and (min-width: 768px){
+   header p{  
+    padding: 0;
+}
+   }
+
+/* MAIN */
+
 
 main{
-    margin: 33px auto;
     display: grid;
-    width: 1150px;
-    height: 580px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-
+    gap: 25px;
+    margin-top: 80px;
+}
+@media screen and (min-width: 768px){
+    main{
+        justify-content: center;
+        grid-template-columns: repeat(3,350px);
+        grid-template-rows: repeat(2,250px);
+        gap:30px;
+        margin-top: 0;
+    }
 }
 section{
     background-color: #fff;
-    width: 350px;
-    height: 250px;
     border-radius: 5px;
-    box-shadow: 0 0 25px  rgba(134, 126, 167, 0.589);
+    box-shadow: 0 10px 30px #83a6d288;
+    margin: 0 30px;
 }
 
 .section__title{
@@ -109,49 +141,49 @@ section{
 }
 .section__image{
     display: block;
-    
     margin: 45px 35px auto auto; 
 }
-
 .supervisor{
-    border-top: 4px solid hsl(180, 62%, 55%);
-    grid-row: 1/3;
-    margin: auto;
+    border-top: 4px solid hsl(180, 62%, 55%);   
 }
 .team{
-    border-top: 4px solid hsl(0, 78%, 62%);
-    margin: auto;
+    border-top: 4px solid hsl(0, 78%, 62%);   
 }
 .karma{
-    border-top: 4px solid hsl(34, 97%, 64%);
-    margin: auto;
+    border-top: 4px solid hsl(34, 97%, 64%);   
+    
 }
 .calculator{
     border-top: 4px solid hsl(212, 86%, 64%);
-    grid-column: 3/4;
-    grid-row: 1/3;
-    margin:auto;
+    order: 1;
+}
+@media screen and (min-width: 768px){
+    .supervisor{
+        grid-row: 1/3;
+        margin: auto;
+        height: 250px;
+    }
+    .team{
+        margin: 0;
+    }
+    .karma{
+        margin: 0;
+    }
+    .calculator{
+        grid-column: 3/4;
+        grid-row: 1/3;
+        margin:auto;
+        height: 250px;
+    }
 }
 
+/* FOOTER */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
